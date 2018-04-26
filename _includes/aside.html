@@ -1,0 +1,66 @@
+                     <aside class="main-sidebar">
+                        <div class="widget widget_bio">
+                           <h5 class="widget-title">Hello</h5>
+
+                           <img src="{{ "/assets/img/widget_about.png" | relative_url }}" alt="author avatar" />
+
+                           <h4 class="author-name">My name is Federico Rinaldi</h4>
+                           <span class="name-delimiter">
+                              <i class="icon-delete2"></i>
+                              <i class="icon-delete2"></i>
+                              <i class="icon-delete2"></i>
+                           </span>
+                           <p class="author-description">CTO and founder of Spirit Consulting. <br />Geek, developer at heart and AI enthusiast.</p>
+
+                            <form class="subscribe-form">
+                              <h5 class="form-title">Subscribe</h5>
+                              <label class="input-line">
+                                 <input type="text" class="form-input check-value" />
+                                 <span class="placeholder">E-mail address</span>
+                                 <i class="form-icon icon-envelope"></i>
+                              </label>
+                              <input type="submit" value="Sign up" class="form-submit" />
+                           </form>
+                        </div>
+
+                        <div class="widget widget_categories">
+                           <h5 class="widget-title">Search by ingredients</h5>
+
+                           <ul>
+                            {% for category in site.categories %}
+                                <li>
+                                    <a href="#">{{ category[0] | capitalize }}</a>
+                                </li>
+                            {% endfor %}
+                           </ul>
+                        </div>
+
+                        <div class="widget widget_popular_posts">
+                           <h5 class="widget-title">Popular dishes</h5>
+
+                           <ul class="clean-list popular-posts">
+                            {% assign posts = site.posts | where_exp:"post","post.image230x170" %}
+                            {% for post in posts limit:4%}
+                              <li class="popular-post">
+                                {% if post.image230x170 %}
+                                <div class="post-cover">
+                                    <a href="{{ post.url }}" class="post-cover">
+                                        <img src="{{ "/assets/img/blog/" | relative_url }}{{ post.image230x170 }}.jpg" alt="popular post" />
+                                    </a>
+                                </div>       
+                                {% endif %}
+
+                                 <h5 class="post-tile">
+                                    <a href="{{ post.url }}">{{ post.title }}</a>
+                                 </h5>
+                              </li>
+                            {% endfor %}
+                           </ul>
+                        </div>
+
+                        <!--<div class="widget widget_advertising">
+                           <a href="#" class="ad-block">
+                              <img src="{{ "/assets/img/ad-widget.jpg" | relative_url }}" alt="ad cover" />
+                           </a>
+                        </div>-->
+                     </aside>

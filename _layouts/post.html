@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       {% include head.html %}
+   </head>
+   <body id="page" class="blog">
+      <!-- Page Content -->
+      <div class="page-wrapper">
+        {% include header.html %}
+
+         <!-- Content Wrapper -->
+         <div class="content-wrapper">
+            <!-- Site Intro -->
+            <div class="site-intro">
+               <img src="{{ "/assets/img/site-intro-bg.jpg" | relative_url }}" alt="site intro" />
+            </div>
+
+            <h2 class="section-title dark">Blog</h2>
+
+            <!-- Blog Area -->
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-18">
+                     <article class="blog-post">
+                        <div class="post-meta">
+                           <span class="post-date"><time>{{ page.date | date: '%B' }} {{ page.date | date: '%e' }}, {{ page.date | date: '%Y' }}</time></span>
+                           <h2 class="post-title">
+                              <a href="{{ page.url }}" rel="bookmark" title="Permanent link to ">{{ page.title }}</a>
+                           </h2>
+                        </div>
+                        
+                        {% if page.image880x430 %}
+                        <div class="post-cover">
+                           <img src="{{ "/assets/img/blog/" | relative_url }}{{ page.image880x430 }}.jpg" alt="post cover" />
+                        </div>
+                        
+                        {% endif %}
+
+
+                        <span class="post-comments"><a href="{{ page.url }}#disqus_thread">Comments (0)</a></span>
+
+                        <div class="post-body">
+                            {{ content }}
+                        </div>
+
+                        <div class="post-footer">
+                           <ul class="clean-list share-block">
+                              <li>
+                                 <a href="#">
+                                    <i class="icon-facebook"></i>
+                                    <span>Facebook</span>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="#">
+                                    <i class="icon-twitter"></i>
+                                    <span>twitter</span>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="#">
+                                    <i class="icon-pinterest"></i>
+                                    <span>Pinterest</span>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="#">
+                                    <i class="icon-google-plus"></i>
+                                    <span>Goole+</span>
+                                 </a>
+                              </li>
+                           </ul>
+                        </div>
+                     </article>
+                     <div class="comments-area">
+                        <h2 class="section-title">Leave a reply</h2>
+
+                        <div id="disqus_thread"></div>
+                        <script>
+
+                        var disqus_config = function () {
+                            this.page.url = '{{ site.url }}/{{ page.url }}';
+                            this.page.identifier = '{{ page.path }}';
+                        };
+
+                        (function() { // DON'T EDIT BELOW THIS LINE
+                        var d = document, s = d.createElement('script');
+                        s.src = '//tasty-codes.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                        })();
+                        </script>
+                        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>                                                        
+                     </div>
+                  </div>
+
+                  <div class="col-md-6 col-lg-5 col-lg-offset-1">
+                      {% include aside.html %}
+                  </div>
+               </div>
+            </div>
+         </div>
+         {% include footer.html %}
+      </div>
+      {% include scripts.html %}
+   </body>
+</html>

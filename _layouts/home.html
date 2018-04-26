@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       {% include head.html %}
+   </head>
+   <body id="page">
+      <!-- Page Content -->
+      <div class="page-wrapper">
+         <!-- Main Header -->
+         {% include header.html %}
+            {{ content }}
+         <!-- Main Footer -->
+         {% include footer.html %}
+      </div>
+      {% include scripts.html %}
+   </body>
+</html>

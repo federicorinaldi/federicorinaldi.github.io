@@ -1,0 +1,14 @@
+      <meta charset="utf-8" />
+      <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+      {% if page.description %}
+      <meta name="description" content="{{ page.description }}" />
+      {% endif %}
+      <meta name="author" content="{{ site.author }}" />
+      <link rel="shortcut icon" href="{{ "/assets/img/favicon.png" | relative_url }}" type="image/x-icon" />
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+      <!-- Mobile Specific Meta -->
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+      <!-- Style CSS -->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,300,300italic,400italic,500,500italic,700" />
+      <link rel="stylesheet" href="{{ "/assets/style.css" | relative_url }}" />
