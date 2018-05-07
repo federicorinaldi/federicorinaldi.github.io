@@ -14,7 +14,7 @@ tags:
 ---
 
 Last time I started a blog I used Wordpress because it was the default back then but I wasn't sure if that was the case this days and with this new attempt to blog came a new search for the perfect blog engine.
-
+<!--more-->
 ### Current state of blog engines 
 The first thing you'll notice if you start that kind of search is that everything points you towards static blogging or site generators, what is this? Basically it means that your site/blog is generated at compile time vs the classic approach of generating the content dynamically per request.
 
