@@ -145,7 +145,7 @@ layout: home
                                 </div>       
                                 {% endif %}
 
-                                <span class="post-comments">Comments (0)</span>
+                                <span class="post-comments"><a href="{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.path }}">Comments (0)</a></span>
 
                                 <div class="post-body">
                                     <p class="post-excerpt">{{ post.excerpt | remove: '<p>' | remove: '</p>' }}</p>

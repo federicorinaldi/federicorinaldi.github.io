@@ -36,8 +36,7 @@
                         
                         {% endif %}
 
-
-                        <span class="post-comments"><a href="{{ page.url }}#disqus_thread">Comments (0)</a></span>
+                        <span class="post-comments"><a href="{{ page.url }}#disqus_thread" data-disqus-identifier="{{ page.path }}">Comments (0)</a></span>
 
                         <div class="post-body">
                             {{ content }}
