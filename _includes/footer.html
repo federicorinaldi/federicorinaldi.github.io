@@ -8,105 +8,31 @@
                      </div>
                   </div>
 
-                  <div class="col-md-7">
-                     <!--<div class="widget widget_tagcloud">
-                        <h5 class="widget-title">Tags</h5>
+                    <div class="col-md-7">
+                        <div class="widget widget_tagcloud">
+                            <h5 class="widget-title">Tags</h5>
 
-                        <div class="tagcloud">
-                           <a href="#">
-                              <span class="text">Fish</span>
-                           </a>
-                           <a href="#">
-                              <span class="text">Chicken</span>
-                           </a>
-                           <a href="#">
-                              <span class="text">Garlic</span>
-                           </a>
-                           <a href="#">
-                              <span class="text">Onion</span>
-                           </a>
-                           <a href="#">
-                              <span class="text">Meat</span>
-                           </a>
-                           <a href="#">
-                              <span class="text">Potato</span>
-                           </a>
-                           <a href="#">
-                              <span class="text">Tomatoes</span>
-                           </a>
-                           <a href="#">
-                              <span class="text">Pork</span>
-                           </a>
-                           <a href="#">
-                              <span class="text">Seafood</span>
-                           </a>
-                           <a href="#">
-                              <span class="text">Eggs</span>
-                           </a>
-                           <a href="#">
-                              <span class="text">Oil</span>
-                           </a>
-                           <a href="#">
-                              <span class="text">Milk</span>
-                           </a>
-                           <a href="#">
-                              <span class="text">Soup</span>
-                           </a>
-                           <a href="#">
-                              <span class="text">Dessert</span>
-                           </a>
+                            <div class="tagcloud">
+                                {% for tag in site.tags %}
+                                    <a href="#">
+                                        <span class="text">{{ tag[0] | capitalize }}</span>                                    
+                                    </a>
+                                {% endfor %}
+                            </div>
                         </div>
-                     </div>-->
-                  </div>
+                    </div>
 
                   <div class="col-md-6">
-                     <!--<div class="widget widget_categories">
+                     <div class="widget widget_categories">
                         <h5 class="widget-title">Links</h5>
                         <ul>
-                           <li>
-                              <a href="#">Beans</a>
-                           </li>
-                           <li>
-                              <a href="#">Pork</a>
-                           </li>
-                           <li>
-                              <a href="#">Rice</a>
-                           </li>
-                           <li>
-                              <a href="#">Seafod</a>
-                           </li>
-                           <li>
-                              <a href="#">Eggs</a>
-                           </li>
-                           <li>
-                              <a href="#">Vegetables</a>
-                           </li>
-                           <li>
-                              <a href="#">Oats</a>
-                           </li>
-                           <li>
-                              <a href="#">Potatoes</a>
-                           </li>
-                           <li>
-                              <a href="#">Fruit</a>
-                           </li>
-                           <li>
-                              <a href="#">Pork</a>
-                           </li>
-                           <li>
-                              <a href="#">Beef</a>
-                           </li>
-                           <li>
-                              <a href="#">Oil</a>
-                           </li>
-                           <li>
-                              <a href="#">Chicken</a>
-                           </li>
-                           <li>
-                              <a href="#">Dessert</a>
-                           </li>
+                            {% for category in site.categories %}
+                                <li>
+                                    <a href="#">{{ category[0] | capitalize }}</a>
+                                </li>
+                            {% endfor %}
                         </ul>
-                     </div>-->
+                     </div>
                   </div>
 
                   <div class="col-md-5">
@@ -149,6 +75,6 @@
                   </div>
                </div>
 
-               <p class="copyrights align-center">Copyright 2016 <a href="http://www.spiritconsultingllc.com/" target="_blank">Spirit Consulting</a></p>
+               <p class="copyrights align-center">Copyright 2018 <a href="http://www.spiritconsultingllc.com/" target="_blank">Spirit Consulting</a></p>
             </div>
          </footer>
