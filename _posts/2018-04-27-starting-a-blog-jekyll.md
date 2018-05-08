@@ -11,6 +11,8 @@ tags:
     - open source
     - opinion
     - static content generator
+image880x430: "2018-04-27-starting-a-blog-jekyll880x430"
+image280x280: "2018-04-27-starting-a-blog-jekyll280x280"
 ---
 
 Last time I started a blog I used Wordpress because it was the default back then but I wasn't sure if that was the case this days and with this new attempt to blog came a new search for the perfect blog engine.
