@@ -1,9 +1,11 @@
 title: Tasty Codes
 email: f@tasty.codes
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  This is an experimental blog, I will try to write about things I'm
+  researching like artificial intelligence, cloud computing, machine 
+  learning and IoT (internet of things), mobile development and why 
+  not our usual web based development. You can read more 
+  about this in the about page.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://tasty.codes" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: soyfedex
