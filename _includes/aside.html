@@ -29,7 +29,7 @@
                            <ul>
                             {% for category in site.categories %}
                                 <li>
-                                    <a href="#">{{ category[0] | capitalize }}</a>
+                                    <a href="/categories/#{{ category[0] }}">{{ category[0] | capitalize }}</a>
                                 </li>
                             {% endfor %}
                            </ul>
