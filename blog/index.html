@@ -15,6 +15,8 @@ layout: default
                <div class="row">
                   <div class="col-md-18">
                          {% for post in paginator.posts %}
+                         {% capture assets_subfolder %}{{ post.path | replace: '_posts/', '' | replace: '.md', '' }}{% endcapture %}
+                         {% capture assets_path %}{{ "/assets/posts/" | append: assets_subfolder | append: '/' | relative_url }}{% endcapture %}
                             <article class="blog-post">
                                 <div class="post-meta">
                                     <span class="post-date"><time>{{ post.date | date: '%B' }} {{ post.date | date: '%e' }}, {{ post.date | date: '%Y' }}</time></span>
@@ -26,7 +28,7 @@ layout: default
                                 {% if post.image880x430 %}
                                 <div class="post-cover">
                                     <a href="{{ post.url }}">
-                                        <img src="{{ "/assets/img/blog/" | relative_url }}{{ post.image880x430 }}.jpg" alt="post cover" />
+                                        <img src="{{ assets_path }}{{ post.image880x430 }}.jpg" alt="post cover" />
                                     </a>
                                 </div>       
                                 {% endif %}

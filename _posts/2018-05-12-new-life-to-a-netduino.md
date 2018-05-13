@@ -1,12 +1,20 @@
 ---
-layout: post
+layout: recipe
 title:  "Giving new life to a netduino with TinyCLR"
 date:   2018-05-12 19:00:00 +1000
 category: IoT
 tags: 
     - TinyCLR
     - IoT
+ingredients:
+    - Netduino 3
+    - TinyCLR config
+    - TinyCLR VSIX
+    - TinyCLR nuget packages
+    - DfuSe
+cook_time: "30 min"
 image880x430: "2018-04-27-starting-a-blog-jekyll880x430"
+image1180x570: "2018-04-27-starting-a-blog-jekyll880x430"
 image280x280: "2018-04-27-starting-a-blog-jekyll280x280"
 ---
 
@@ -28,16 +36,15 @@ There are two ways to do this, let's start with the thorough one [(you can jump 
 1. Download and extract the contents of [CMSIS](https://github.com/ARM-software/CMSIS_5/releases/download/5.2.0/ARM.CMSIS.5.2.0.pack) (it's a zip file, you can just rename it's extension) into the CMSIS folder of the cloned repo.
 1. Download and extract the latest [TinyCLR OS Core Library](https://github.com/ghi-electronics/TinyCLR-Ports/releases) (as of this post v0.11.0) into the Core folder of the cloned repo.
 1. Open a command prompt, change the directory to the cloned repo, and then execute:
-```bash
+{% highlight bash %}
 build.bat netduino3
-``` 
-6. Now you should have inside Build/release/netduino3 an image called "netduino3 Firmware.hex"
+{% endhighlight %}
+{:start="6"}
+1. Now you should have inside Build/release/netduino3 an image called "netduino3 Firmware.hex"
 1. Download [DfuSe USB device firmware upgrade](http://www.st.com/en/development-tools/stsw-stm32080.html#getsoftware-scroll) from STMicroelectronics
 1. After installing the software, open DFU File manager and select "Generate a DFU from HEX
 1. Click S19 or Hex button and select the previously saved .hex firmware image
-1. Select Generate and it will as you where tu put the generated .dfu file
-
-<a name="quick-way"></a>
+1. Select Generate and it will as you where tu put the generated .dfu file<a name="quick-way"></a>
 
 ### Download firmware
 
@@ -58,7 +65,8 @@ Either if you built the image or you went on the easy route, you should have by 
 
 **Note: from now on make sure that everything you download is the same version as the firmware, if you downloaded the image I generated then the version is v0.11.0**
 
-9. Select your device from the list and click Connect, your device should show the upgraded firmware version
+{:start="9"}
+1. Select your device from the list and click Connect, your device should show the upgraded firmware version
 
 ### Hello world
 
@@ -74,7 +82,7 @@ Ok now that the boring part is over, we can start playing with our device. We ar
 1. Add GHIElectronics.TinyCLR.Devices and GHIElectronics.TinyCLR.Pins
 1. Add the following code to your main method and run the app:
 
-```csharp
+{% highlight csharp %}
 static void Main()
 {
     GpioPin led = GpioController.GetDefault().OpenPin(
@@ -89,7 +97,7 @@ static void Main()
         Thread.Sleep(100);
     }
 }
-```
+{% endhighlight %}
 
 Now you should have a blinking light in your device
 

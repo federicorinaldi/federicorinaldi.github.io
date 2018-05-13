@@ -7,6 +7,8 @@
       <!-- Page Content -->
       <div class="page-wrapper">
         {% include header.html %}
+        {% capture assets_subfolder %}{{ page.path | replace: '_posts/', '' | replace: '.md', '' }}{% endcapture %}
+        {% capture assets_path %}{{ "/assets/posts/" | append: assets_subfolder | append: '/' | relative_url }}{% endcapture %}
 
          <!-- Content Wrapper -->
          <div class="content-wrapper">
@@ -31,7 +33,7 @@
                         
                         {% if page.image880x430 %}
                         <div class="post-cover">
-                           <img src="{{ "/assets/img/blog/" | relative_url }}{{ page.image880x430 }}.jpg" alt="post cover" />
+                           <img src="{{ assets_path }}{{ page.image880x430 }}.jpg" alt="post cover" />
                         </div>
                         
                         {% endif %}
@@ -43,32 +45,7 @@
                         </div>
 
                         <div class="post-footer">
-                           <ul class="clean-list share-block">
-                              <li>
-                                 <a href="#">
-                                    <i class="icon-facebook"></i>
-                                    <span>Facebook</span>
-                                 </a>
-                              </li>
-                              <li>
-                                 <a href="#">
-                                    <i class="icon-twitter"></i>
-                                    <span>twitter</span>
-                                 </a>
-                              </li>
-                              <li>
-                                 <a href="#">
-                                    <i class="icon-pinterest"></i>
-                                    <span>Pinterest</span>
-                                 </a>
-                              </li>
-                              <li>
-                                 <a href="#">
-                                    <i class="icon-google-plus"></i>
-                                    <span>Goole+</span>
-                                 </a>
-                              </li>
-                           </ul>
+                            {% include share.html %}
                         </div>
                      </article>
                      <div class="comments-area">
