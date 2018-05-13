@@ -3,10 +3,10 @@ layout: post
 title:  "Welcome to tasty codes"
 date:   2018-04-26 02:20:14 +0100
 tags:
-    - thoughts 
-    - announcements
-    - personal
-category: personal 
+    - Thoughts 
+    - Announcements
+    - Personal
+category: Personal 
 image880x430: "2018-04-26-welcome-to-tasty-codes880x430"
 image294x294: "2018-04-26-welcome-to-tasty-codes294x294"
 image280x280: "2018-04-26-welcome-to-tasty-codes280x280"

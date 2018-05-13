@@ -15,7 +15,7 @@
                             <div class="tagcloud">
                                 {% for tag in site.tags %}
                                     <a href="/tags/#{{ tag[0] }}">
-                                        <span class="text">{{ tag[0] | capitalize }}</span>                                    
+                                        <span class="text">{{ tag[0] }}</span>                                    
                                     </a>
                                 {% endfor %}
                             </div>
@@ -28,7 +28,7 @@
                         <ul>
                             {% for category in site.categories %}
                                 <li>
-                                    <a href="/categories/#{{ category[0] }}">{{ category[0] | capitalize }}</a>
+                                    <a href="/categories/#{{ category[0] }}">{{ category[0] }}</a>
                                 </li>
                             {% endfor %}
                         </ul>

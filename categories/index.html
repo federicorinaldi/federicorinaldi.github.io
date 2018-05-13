@@ -15,7 +15,7 @@ layout: default
                    <div class="row">
                       <div class="col-md-18">
                             {% for tag in site.categories %} 
-                              <h2 id="{{ tag[0] }}">{{ tag[0] | capitalize }} ({{ tag[1].size }})</h2>
+                              <h2 id="{{ tag[0] }}">{{ tag[0] }} ({{ tag[1].size }})</h2>
                               <ul class="post-list">
                                 {% assign pages_list = tag[1] %}  
                                 {% for post in pages_list %}
