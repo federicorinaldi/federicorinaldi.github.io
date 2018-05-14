@@ -42,13 +42,20 @@ build.bat netduino3
 {:start="6"}
 1. Now you should have inside Build/release/netduino3 an image called "netduino3 Firmware.hex"
 1. Download [DfuSe USB device firmware upgrade](http://www.st.com/en/development-tools/stsw-stm32080.html#getsoftware-scroll) from STMicroelectronics
-1. After installing the software, open DFU File manager and select "Generate a DFU from HEX
+1. After installing the software, open DFU File manager and select "Generate a DFU from HEX"
+
+![Generate a DFU from HEX](/assets/posts/2018-05-12-new-life-to-a-netduino/dfu-manager1.png)
+
+{:start="9"}
 1. Click S19 or Hex button and select the previously saved .hex firmware image
-1. Select Generate and it will as you where tu put the generated .dfu file<a name="quick-way"></a>
+1. Select Generate and it will as you where tu put the generated .dfu file
+
+![Generate a DFU](/assets/posts/2018-05-12-new-life-to-a-netduino/dfu-manager2.png)
+<a name="quick-way"></a>
 
 ### Download firmware
 
-If you find building from source too cumbersome, I already generated the image for you. Grab the generated DFU file here
+If you find building from source too cumbersome, I already generated the image for you. Grab the generated DFU file [here](/assets/posts/2018-05-12-new-life-to-a-netduino/netduino3%20Firmware%20v0.11.0.dfu)
 
 ### Flash the device
 
@@ -59,6 +66,10 @@ Either if you built the image or you went on the easy route, you should have by 
 1. Open DfuSeDemo
 1. Your device should appear in the dropdown list of "Available DFU Devices"
 1. Under the Upgrade and Verify Action section, press the "Choose" button and select your .DFU image
+
+![Upgrade firmware](/assets/posts/2018-05-12-new-life-to-a-netduino/dfuse.png)
+
+{:start="6"}
 1. Click "Upgrade"
 1. After the upgrade finishes, click on Leave DFU Mode
 1. Download [TinyCLR config](http://docs.ghielectronics.com/software/tinyclr/downloads.html#tinyclr-config). 
@@ -75,10 +86,22 @@ Ok now that the boring part is over, we can start playing with our device. We ar
 1. Download the visual studio project system [here](http://docs.ghielectronics.com/software/tinyclr/downloads.html#visual-studio-project-system)
 1. Download the Libraries [here](http://docs.ghielectronics.com/software/tinyclr/downloads.html#libraries)
 1. Open VS and create a new TinyCLR application
+
+![New TinyCLR application](/assets/posts/2018-05-12-new-life-to-a-netduino/vs1.png)
+
+{:start="4"}
 1. Right click on the solution and select Manage Nuget Packages for Solution
-1. Add Spirit.TinyCLR.Pins
+1. Add [Spirit.TinyCLR.Pins](https://www.nuget.org/packages/Spirit.TinyCLR.Pins)
 1. Click on the settings icon
+
+![Click on the settings icon](/assets/posts/2018-05-12-new-life-to-a-netduino/vs2.png)
+
+{:start="7"}
 1. Extract the libraries in a folder and this folder as a Package source
+
+![Adding the folder as a package source](/assets/posts/2018-05-12-new-life-to-a-netduino/vs3.png)
+
+{:start="8"}
 1. Add GHIElectronics.TinyCLR.Devices and GHIElectronics.TinyCLR.Pins
 1. Add the following code to your main method and run the app:
 
@@ -100,6 +123,8 @@ static void Main()
 {% endhighlight %}
 
 Now you should have a blinking light in your device
+
+![Netduino blinking light](/assets/posts/2018-05-12-new-life-to-a-netduino/blinking-light.gif)
 
 ### Wrapping up
 
