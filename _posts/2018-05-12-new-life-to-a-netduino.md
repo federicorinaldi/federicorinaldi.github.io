@@ -13,9 +13,9 @@ ingredients:
     - TinyCLR nuget packages
     - DfuSe
 cook_time: "30 min"
-image880x430: "2018-04-27-starting-a-blog-jekyll880x430"
-image1180x570: "2018-04-27-starting-a-blog-jekyll880x430"
-image280x280: "2018-04-27-starting-a-blog-jekyll280x280"
+image880x430: "cover880x430.png"
+image1180x570: "cover1180x570.png"
+image280x280: "2018-04-27-starting-a-blog-jekyll280x280.jpg"
 ---
 
 I have a netduino 3 wifi that I bought a few years ago. As a .net developer, to have it running in every device possible is really apealing. Sadly this little device wasn't getting any love for the past few years so it was not possible to use it in VS 2017, you had to use it's SDK (a custom flavor of .Net Micro Framework) with VS 2015.

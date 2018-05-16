@@ -7,10 +7,10 @@ tags:
     - Announcements
     - Personal
 category: Personal 
-image880x430: "2018-04-26-welcome-to-tasty-codes880x430"
-image294x294: "2018-04-26-welcome-to-tasty-codes294x294"
-image280x280: "2018-04-26-welcome-to-tasty-codes280x280"
-image230x170: "2018-04-26-welcome-to-tasty-codes230x170"
+image880x430: "2018-04-26-welcome-to-tasty-codes880x430.jpg"
+image294x294: "2018-04-26-welcome-to-tasty-codes294x294.jpg"
+image280x280: "2018-04-26-welcome-to-tasty-codes280x280.jpg"
+image230x170: "2018-04-26-welcome-to-tasty-codes230x170.jpg"
 ---
 
 I always felt like I should blog, but in reality I never had the discipline to do it properly. I had an attempt with [my previous blog][last-blog], but after 19 posts over 4 years ('08-'12) you can tell it wasn't working. So why do it now? Well first of all I think I can handle it, that I have that discipline I was lacking a few years ago (or not, we'll see). 

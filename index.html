@@ -61,7 +61,7 @@ layout: home
                             </div>
                             {% if post.image294x294 %}
                                 <a href="{{ post.url }}">
-                                    <img src="{{ "/assets/img/blog/" | relative_url }}{{ post.image294x294 }}.jpg" alt="recipe cover" />
+                                    <img src="{{ "/assets/img/blog/" | relative_url }}{{ post.image294x294 }}" alt="recipe cover" />
                                 </a>
                             {% endif %}
                             </div>
@@ -111,7 +111,7 @@ layout: home
                                     {% if post.image280x280 %}
                                     <div class="post-cover">
                                         <a href="page-single-recipe.html">
-                                            <img src="{{ assets_path }}{{ post.image280x280 }}.jpg" alt="recipe cover" />
+                                            <img src="{{ assets_path }}{{ post.image280x280 }}" alt="recipe cover" />
                                         </a>
                                     </div>       
                                     {% endif %}
@@ -144,7 +144,7 @@ layout: home
                                 {% if post.image880x430 %}
                                 <div class="post-cover">
                                     <a href="{{ post.url }}">
-                                        <img src="{{ assets_path }}{{ post.image880x430 }}.jpg" alt="post cover" />
+                                        <img src="{{ assets_path }}{{ post.image880x430 }}" alt="post cover" />
                                     </a>
                                 </div>       
                                 {% endif %}
